@@ -11,10 +11,6 @@ export const Hero = () => {
           <a href="#" target="_blank">CV</a>
         </div>
       </section>
-      <section className="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate frontend developer and QA engineer with experience in building user-friendly interfaces and ensuring high-quality products. I enjoy solving complex problems and continuously learning new technologies to improve my skills.</p>
-      </section>  
     </>
   );
 };

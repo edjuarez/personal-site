@@ -6,7 +6,7 @@ input:focus, textarea:focus {
   border-color: #111;
 }
 
-body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #fff; min-height: 100vh; }
+/* body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #fff; min-height: 100vh; } */
 .hero {
   min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; padding: 2rem;
@@ -173,4 +173,16 @@ h1 {
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }

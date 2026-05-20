@@ -6,6 +6,7 @@ import './App.css'
 import { Hero } from './components/hero'
 import { About } from './components/about'
 import {Contact} from './components/Contact'
+import { Skills } from './components/Skills'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
     <>
       <Hero />
       <About />
+      <Skills />
       <Contact />
 
       {/* <section id="center">
