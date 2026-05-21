@@ -3,10 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import { Hero } from './components/hero'
+import { Hero } from './components/Hero/Hero'
 import { About } from './components/about'
 import {Contact} from './components/Contact'
 import { Skills } from './components/Skills'
+import { MyWork } from './components/myWork/MyWork'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <MyWork />
       <Contact />
 
       {/* <section id="center">

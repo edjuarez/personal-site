@@ -57,6 +57,9 @@ export const Skills = () => {
           overflow: "hidden",
           fontFamily: "monospace",
           fontSize: "1.2rem",
+          width: "1000px",
+          maxWidth: "600px",
+          margin: "0 auto",
         }}
       >
         {/* HEADER DE LA CONSOLA */}
