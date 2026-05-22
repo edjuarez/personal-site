@@ -1,53 +1,60 @@
 import "./Hero.css";
+import { Terminal } from "../Terminal/Terminal";
 
 export const Hero = () => {
   return (
-    <>  
-      <section className="hero">
-        <div className="hero-content">
+    <section className="hero">
 
-          <h1 className="hero-title">
-            Eduardo!!
-          </h1>
+      {/* LEFT SIDE */}
 
-          <h2 className="hero-subtitle">
-            Frontend Developer & QA Engineer
-          </h2>
+      <div className="hero-left">
 
-          <p className="hero-tagline">
-            I build interfaces, fix bugs and improve
-            quality for real-world products.
-          </p>
+        <p className="hero-label">
+          FRONTEND DEVELOPER
+        </p>
 
-          <div className="hero-buttons">
+        <h1 className="hero-title">
+          Eduardo
+        </h1>
 
-            <a
-              href="https://github.com/"
-              target="_blank"
-              className="hero-btn primary"
-            >
-              GitHub
-            </a>
+        <h2 className="hero-subtitle">
+          Frontend Developer & QA Engineer
+        </h2>
 
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              className="hero-btn secondary"
-            >
-              LinkedIn
-            </a>
+        <p className="hero-description">
+          I build interfaces, fix bugs and create
+          polished user experiences for real-world
+          products.
+        </p>
 
-            <a
-              href="#"
-              target="_blank"
-              className="hero-btn outline"
-            >
-              CV
-            </a>
+        {/* ICONS */}
 
-          </div>
+        <div className="hero-socials">
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+
         </div>
-      </section>
-    </>
+
+      </div>
+
+      {/* RIGHT SIDE */}
+
+      <div className="hero-right">
+        <Terminal />
+      </div>
+
+    </section>
   );
 };
