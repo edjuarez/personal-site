@@ -1,12 +1,12 @@
 .footer {
   padding:
-    2rem
+    1rem
     8%;
 
   position: relative;
 
   background:
-    #050505;
+    #0b132f;
 
   border-top:
     1px solid rgba(255,255,255,0.06);
@@ -55,7 +55,7 @@
   color:
     rgba(255,255,255,0.5);
 
-  font-size: 0.95rem;
+  font-size: 0.75rem;
 
   letter-spacing: 0.3px;
 }

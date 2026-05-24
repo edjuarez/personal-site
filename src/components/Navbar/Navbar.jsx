@@ -12,10 +12,6 @@ export const Navbar = () => {
 
  <header className="navbar">
 
-      <div className="navbar-logo">
-        Eduardo
-      </div>
-
       <nav className="navbar-links">
 
         <a href="#home">

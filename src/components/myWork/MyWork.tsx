@@ -7,7 +7,6 @@ import { projects } from "../../data/projects";
 export const MyWork = () => {
   return (
     <>
-      <div className="section-divider" />
       <section id="work" className="my-work">
 
         <div className="my-work-header">

@@ -106,103 +106,94 @@ export const Contact = () => {
     //     </button>
     //   </form>
     // </section>
-    <>
-      <div className="section-divider" />
-      <section id="contact" className="contact-section">
+    <section id="contact" className="contact-section">
+      <div className="contact-container">
 
-        <div className="contact-container">
+        {/* LEFT SIDE */}
 
-          {/* LEFT SIDE */}
+        <div className="contact-info">
 
-          <div className="contact-info">
+          <h2 className="contact-title">
+            Let's <span style={{ color: "#3a0eed" }}>Talk</span>
+          </h2>
 
-            <p className="contact-label">
-              CONTACT
-            </p>
+          <p className="contact-description">
+            I'm always interested in new projects,
+            frontend opportunities and creative ideas.
+          </p>
 
-            <h2 className="contact-title">
-              Let's <span style={{ color: "#3a0eed" }}>Talk</span>
-            </h2>
+          <div className="contact-details">
 
-            <p className="contact-description">
-              I'm always interested in new projects,
-              frontend opportunities and creative ideas.
-            </p>
-
-            <div className="contact-details">
-
-              <div className="contact-item">
-                <span>Email</span>
-                <p>eduardo@email.com</p>
-              </div>
-
-              <div className="contact-item">
-                <span>Phone</span>
-                <p>+54 9 351 xxx xxxx</p>
-              </div>
-
-              <div className="contact-item">
-                <span>Location</span>
-                <p>Córdoba, Argentina</p>
-              </div>
-
+            <div className="contact-item">
+              <span>Email</span>
+              <p>eduardo@email.com</p>
             </div>
 
-            {/* SOCIALS */}
+            <div className="contact-item">
+              <span>Phone</span>
+              <p>+54 9 351 xxx xxxx</p>
+            </div>
 
-            <div className="contact-socials">
-
-              <a
-                href="https://github.com/"
-                target="_blank"
-              >
-                GitHub
-              </a>
-
-              <a
-                href="https://linkedin.com/"
-                target="_blank"
-              >
-                LinkedIn
-              </a>
-
+            <div className="contact-item">
+              <span>Location</span>
+              <p>Córdoba, Argentina</p>
             </div>
 
           </div>
 
-          {/* RIGHT SIDE */}
+          {/* SOCIALS */}
 
-          <div className="contact-form-wrapper">
+          <div className="contact-socials">
 
-            <form className="contact-form">
+            <a
+              href="https://github.com/"
+              target="_blank"
+            >
+              GitHub
+            </a>
 
-              <input
-                type="text"
-                placeholder="Your Name"
-              />
-
-              <input
-                type="email"
-                placeholder="Your Email"
-              />
-
-              <textarea
-                placeholder="Your Message"
-                rows={7}
-              />
-
-              <button type="submit">
-                Send Message
-              </button>
-
-            </form>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
 
           </div>
 
         </div>
 
-      </section>
-    </>
+        {/* RIGHT SIDE */}
 
+        <div className="contact-form-wrapper">
+
+          <form className="contact-form">
+
+            <input
+              type="text"
+              placeholder="Your Name"
+            />
+
+            <input
+              type="email"
+              placeholder="Your Email"
+            />
+
+            <textarea
+              placeholder="Your Message"
+              rows={7}
+            />
+
+            <button type="submit">
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
   );
 }
