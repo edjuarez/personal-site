@@ -1,6 +1,10 @@
 import "./Hero.css";
 import { Terminal } from "../Terminal/Terminal";
-
+import {
+  FiGithub,
+  FiDownload
+} from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa6";
 export const Hero = () => {
   return (
     <>
@@ -9,10 +13,6 @@ export const Hero = () => {
         {/* LEFT SIDE */}
 
         <div className="hero-left">
-
-          {/* <p className="hero-label">
-            Software Developer
-          </p> */}
 
           <h1 className="hero-title">
            Eduardo
@@ -29,7 +29,7 @@ export const Hero = () => {
 
           {/* ICONS */}
 
-          <div className="hero-socials">
+          {/* <div className="hero-socials">
 
             <a
               href="https://github.com/"
@@ -51,8 +51,34 @@ export const Hero = () => {
               Contact
             </a>
 
-          </div>
+          </div> */}
+<div className="hero-buttons">
 
+  <a
+    href="https://github.com/"
+    target="_blank"
+    className="hero-btn primary"
+  >
+    <FiGithub />
+  </a>
+
+  <a
+    href="https://linkedin.com/"
+    target="_blank"
+    className="hero-btn secondary"
+  >
+    <FaLinkedin  />
+  </a>
+
+  <a
+    href="#"
+    className="hero-btn outline"
+  >
+    <FiDownload />
+    <span>CV</span>
+  </a>
+
+</div>
         </div>
 
         {/* RIGHT SIDE */}

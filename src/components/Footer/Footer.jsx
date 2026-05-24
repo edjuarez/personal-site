@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="footer-content">
 
         <div className="footer-logo">
-          EJ
+          <span>EJ</span>
         </div>
 
         <p className="footer-text">

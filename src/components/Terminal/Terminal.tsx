@@ -22,36 +22,38 @@ const FULL_CODE_TOKENS: CodeToken[] = [
   
   { text: 'skills: ', type: 'property', line: 4, indent: 'standard' },
   { text: "[", type: 'plain', line: 4 },
-  { text: "'React', ", type: 'string', line: 4 },
-  { text: "'TypeScript', ", type: 'string', line: 4 },
-  { text: "'BrightScript',", type: 'string', line: 4 },
+  { text: " 'JavaScript', ", type: 'string', line: 4,  indent: 'standard' },
+  { text: "'TypeScript', ", type: 'string', line: 5, indent: 'extra' },
+  { text: "'BrightScript',", type: 'string', line: 6, indent: 'extra' },
   
-  { text: "'JavaScript', ", type: 'string', line: 5, indent: 'extra' },
-  { text: "'CSS', ", type: 'string', line: 5 },
-  { text: "'SASS'", type: 'string', line: 5 },
-  { text: '],', type: 'plain', line: 5 },
+  { text: "'React', ", type: 'string', line: 7, indent: 'extra' },
+  { text: "'Angular', ", type: 'string', line: 8, indent: 'extra' },
+  { text: "'HTML', ", type: 'string', line: 9, indent: 'extra' },
+  { text: "'CSS', ", type: 'string', line: 10, indent: 'extra' },
+  { text: "'SASS' ", type: 'string', line: 11, indent: 'extra' },
+  { text: '],', type: 'plain', line: 11, indent: 'extra'},
   
-  { text: 'passion: ', type: 'property', line: 6, indent: 'standard' },
-  { text: "'Crear productos de calidad", type: 'string', line: 6 },
+  // { text: 'passion: ', type: 'property', line: 6, indent: 'standard' },
+  // { text: "'Crear productos de calidad", type: 'string', line: 6 },
   
-  { text: "y experiencias increíbles',", type: 'string', line: 7, indent: 'extra' },
+  // { text: "y experiencias increíbles',", type: 'string', line: 7, indent: 'extra' },
   
-  { text: 'challenge: ', type: 'property', line: 8, indent: 'standard' },
-  { text: "'Seguir aprendiendo y", type: 'string', line: 8 },
+  // { text: 'challenge: ', type: 'property', line: 8, indent: 'standard' },
+  // { text: "'Seguir aprendiendo y", type: 'string', line: 8 },
   
-  { text: "superar nuevos desafíos'", type: 'string', line: 9, indent: 'extra' },
+  // { text: "superar nuevos desafíos'", type: 'string', line: 9, indent: 'extra' },
   
-  { text: '};', type: 'plain', line: 10 },
+  // { text: '};', type: 'plain', line: 13 },
   
-  { text: 'function ', type: 'keyword', line: 12 },
-  { text: 'buildAmazingThings', type: 'function', line: 12 },
-  { text: '() {', type: 'plain', line: 12 },
+  // { text: 'function ', type: 'keyword', line: 14 },
+  // { text: 'buildAmazingThings', type: 'function', line: 14 },
+  // { text: '() {', type: 'plain', line: 14 },
   
-  { text: 'return ', type: 'keyword', line: 13, indent: 'standard' },
-  { text: "'Siempre mejorando 🚀'", type: 'string', line: 13 },
-  { text: ';', type: 'plain', line: 13 },
+  // { text: 'return ', type: 'keyword', line: 13, indent: 'standard' },
+  // { text: "'Siempre mejorando 🚀'", type: 'string', line: 13 },
+  // { text: ';', type: 'plain', line: 13 },
   
-  { text: '}', type: 'plain', line: 14 }
+  // { text: '}', type: 'plain', line: 14 }
 ];
 
 // Calculamos el total de caracteres de nuestro código
