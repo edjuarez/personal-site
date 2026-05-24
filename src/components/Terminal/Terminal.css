@@ -1,101 +1,119 @@
-.terminal {
-  width: 100%;
-  max-width: 550px;
-
-  border-radius: 24px;
-
+/* Contenedor Principal con estética Cyberpunk / Glassmorphism */
+.vscode-typed-profile {
+  background: rgba(11, 8, 19, 0.5); /* Fondo ultra oscuro translúcido */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 
+              0 0 30px rgba(150, 95, 248, 0.1);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   overflow: hidden;
-
-  background:
-    rgba(15,23,42,0.75);
-
-  backdrop-filter: blur(14px);
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  box-shadow:
-    0 10px 40px rgba(0,0,0,0.35);
+  width: 100%;
+  max-width: 600px; /* Un poco más ancho para las líneas largas */
+  margin: 0 auto;
 }
 
-/* HEADER */
+/* Barra superior */
+.window-header {
+  background: rgba(20, 16, 34, 0.7);
+  padding: 12px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
 
-.terminal-header {
+.window-controls {
   display: flex;
-
-  gap: 0.5rem;
-
-  padding: 1rem;
-
-  background:
-    rgba(255,255,255,0.03);
+  gap: 8px;
 }
 
-.dot {
+.control-dot {
   width: 12px;
   height: 12px;
-
   border-radius: 50%;
 }
 
-.red {
-  background: #ff5f56;
+/* Colores personalizados para los botones superiores */
+.control-dot.purple { background: #d946ef; box-shadow: 0 0 8px rgba(217, 70, 239, 0.4); }
+.control-dot.blue   { background: #3b82f6; box-shadow: 0 0 8px rgba(59, 130, 246, 0.4); }
+.control-dot.indigo { background: #6366f1; box-shadow: 0 0 8px rgba(99, 102, 241, 0.4); }
+
+/* Cuerpo de la ventana */
+.window-body {
+  padding: 20px 0; /* Padding vertical en el cuerpo */
+  font-size: 14px;
+  line-height: 1.5; /* Ajuste para el espaciado de línea */
 }
 
-.yellow {
-  background: #ffbd2e;
-}
-
-.green {
-  background: #27c93f;
-}
-
-/* BODY */
-
-.terminal-body {
-  padding: 2rem;
-
-  font-family: monospace;
-
+/* Contenido del código */
+.code-content {
   color: #e2e8f0;
-
-  min-height: 280px;
 }
 
-.prompt {
-  color: #7c3aed;
-
-  margin-right: 0.5rem;
+/* Estructura de cada línea */
+.code-line {
+  display: flex;
+  align-items: flex-start;
+  min-height: 21px; /* Mismo que font-size * line-height */
+  padding: 0 18px;
 }
 
-/* TYPING EFFECT */
-
-.typing {
-  width: fit-content;
-
-  overflow: hidden;
-
-  white-space: nowrap;
-
-  border-right: 2px solid #7c3aed;
-
-  animation:
-    typing 3s steps(22),
-    blink 0.8s infinite;
+/* Números de línea laterales (fijos) */
+.line-number {
+  color: rgba(255, 255, 255, 0.15);
+  user-select: none;
+  width: 3ch; /* Ancho fijo para 2 dígitos + espacio */
+  text-align: right;
+  margin-right: 20px;
+  display: inline-block;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
+/* Contenedor del texto de la línea */
+.line-text {
+  flex-grow: 1;
+}
 
-  to {
-    width: 100%;
-  }
+/* Indentaciones */
+.code-line.indent .line-text {
+  padding-left: 2ch;
+}
+.code-line.indent-extra .line-text {
+  padding-left: 12ch; /* Alineación exacta para textos multilínea */
+}
+
+/* Tokenizador de colores (Colores vibrantes estilo Neón/Cyber) */
+.token.keyword {
+  color: #d946ef; /* const, function, return en Magenta brillante */
+  font-weight: 600;
+}
+
+.token.variable {
+  color: #e2e8f0; /* Nombre del objeto en blanco roto */
+}
+
+.token.property {
+  color: #ff5252; /* name, role, skills, etc. en rojo coral */
+}
+
+.token.string {
+  color: #22d3ee; /* Los valores de texto en Cian brillante */
+}
+
+.token.function {
+  color: #3b82f6; /* Nombres de funciones en Azul eléctrico */
+}
+
+.token.plain {
+  color: #cbd5e1; /* Brackets, comas, etc. */
+}
+
+/* Cursor interactivo parpadeante al final de la escritura */
+.typing-cursor {
+  color: #ff5252; /* Mismo color que las propiedades */
+  font-weight: bold;
+  margin-left: 1px;
+  animation: blink 0.9s infinite;
 }
 
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }

@@ -132,16 +132,45 @@
 
   position: absolute;
 
-  width: 320px;
-  height: 320px;
+  top: 0;
+  left: 50%;
 
-  background: rgba(0, 212, 255, 0.18);
+  transform:
+    translateX(-50%);
 
-  border-radius: 50%;
+  width: 300px;
+  height: 1px;
 
-  filter: blur(80px);
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(135, 108, 199, 1),
+      transparent
+    );
+}
 
-  z-index: 0;
+.footer::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  width: 300px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(135, 108, 199, 1),
+      transparent
+    );
 }
 
 .about-image {
@@ -177,5 +206,102 @@
 
   .about-image {
     max-width: 300px;
+  }
+}
+
+/* Contenedor principal de la sección */
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a0a; /* Tu deep black de base */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+/* Contenedor de los blobs (detrás de todo) */
+.blur-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Para que no interfiera con los clicks del usuario */
+}
+
+/* Base de los círculos difuminados */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px); /* El secreto del diseño premium está en este blur alto */
+  opacity: 0.25; /* Opacidad baja para que sea sutil y cinemático */
+  mix-blend-mode: screen;
+}
+
+/* Círculo Violeta / Magenta */
+.blob-purple {
+  top: 10%;
+  left: 15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #d946ef 0%, #9d4edd 100%);
+  animation: floatPurple 20s infinite alternate ease-in-out;
+}
+
+/* Círculo Azul Eléctrico */
+.blob-blue {
+  bottom: 15%;
+  right: 15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #3b82f6 0%, #1d4ed8 100%);
+  animation: floatBlue 25s infinite alternate ease-in-out;
+}
+
+/* Contenedor de la tarjeta (por encima de los círculos) */
+.about-content-wrapper {
+  position: relative;
+  z-index: 2; /* Importante para quedar sobre los círculos flotantes */
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Tu tarjeta Glassmorphism */
+.about-glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* --- ANIMACIONES DE MOVIMIENTO ORGÁNICO --- */
+@keyframes floatPurple {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(80px, 50px) scale(1.15);
+  }
+  100% {
+    transform: translate(-40px, 100px) scale(0.9);
+  }
+}
+
+@keyframes floatBlue {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-100px, -60px) scale(0.85);
+  }
+  100% {
+    transform: translate(50px, 40px) scale(1.1);
   }
 }

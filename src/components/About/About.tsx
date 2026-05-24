@@ -3,8 +3,12 @@ import "./About.css";
 export const About = () => {
   return (
     <>
-        <div className="section-divider" />
-        <section className="about-section">
+        {/* <div className="section-divider" /> */}
+        <section id="about"className="about-section">
+            {/* <div className="blur-bg-container">
+                <div className="blob blob-purple"></div>
+                <div className="blob blob-blue"></div>
+            </div> */}
             <div className="about-overlay" />
             <div className="about-container">
             {/* LEFT SIDE */}

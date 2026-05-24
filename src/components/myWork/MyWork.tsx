@@ -8,7 +8,7 @@ export const MyWork = () => {
   return (
     <>
       <div className="section-divider" />
-      <section className="my-work">
+      <section id="work" className="my-work">
 
         <div className="my-work-header">
 

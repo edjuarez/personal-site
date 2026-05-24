@@ -3,7 +3,9 @@ import './App.css'
 import { Hero } from './components/Hero/Hero'
 import { About } from './components/About/About'
 import {Contact} from './components/Contact/Contact'
-import { MyWork } from './components/myWork/MyWork'
+import { MyWork } from './components/MyWork/MyWork'
+import { Navbar } from './components/Navbar/Navbar'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,11 +13,13 @@ function App() {
   return (
     <>
     <div className="app-background">
+      <Navbar />
       <Hero />
       <About />
       {/* <Skills /> */}
       <MyWork />
       <Contact />
+      <Footer />
     </div>
     </>
   )
