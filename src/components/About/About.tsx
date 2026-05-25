@@ -1,20 +1,14 @@
 import "./About.css";
 
 import {
-  FiMapPin,
-  FiMail,
-  FiCode,
-  FiLayers,
-  FiZap
-} from "react-icons/fi";
-
-import {
   FaReact,
   FaAngular,
   FaHtml5,
   FaCss3Alt,
   FaGitAlt,
-  FaJsSquare
+  FaJsSquare,
+  FaRobot,
+  FaNodeJs
 } from "react-icons/fa";
 
 import {
@@ -73,6 +67,8 @@ export const About = () => {
               <span><FaHtml5 />HTML5</span>
               <span><FaCss3Alt />CSS3</span>
               <span><FaGitAlt />Git</span>
+              <span><FaRobot />AI</span>
+              <span><FaNodeJs />Node.js</span>
             </div>
           </div>
         </div>

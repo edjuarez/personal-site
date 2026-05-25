@@ -169,7 +169,7 @@ export const Contact = () => {
               <span>
                 {isSending
                   ? "Sending..."
-                  : "Send Message"}
+                  : "Send"}
               </span>
               {/* <span>Send</span> */}
               <IoSendSharp />
