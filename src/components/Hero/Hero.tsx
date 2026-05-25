@@ -1,10 +1,7 @@
 import "./Hero.css";
 import { Terminal } from "../Terminal/Terminal";
-import {
-  FiGithub,
-  FiDownload
-} from "react-icons/fi";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaGithub } from "react-icons/fa6";
+
 export const Hero = () => {
   return (
     <>
@@ -14,14 +11,15 @@ export const Hero = () => {
 
         <div className="hero-left">
 
-          <h1 className="hero-title">
-           Eduardo
-          </h1>
-
-          <h2 className="hero-subtitle">
-            {/* <span style={{ color: "#027b79" }}>Web</span>, <span style={{ color: "#8e06b3" }}>Roku</span> & <span style={{ color: "#b18706" }}>Game</span> Developer | Frontend Engineer */}
-            Frontend Engineer
+          <h2 className="hero-title">
+            <span>Eduardo</span> Juárez
           </h2>
+
+          <p className="hero-role">
+            Frontend & Game Developer
+          </p>
+
+          <div className="about-divider" />
 
           <p className="hero-description">
             I build websites, applications and interactive experiences with a focus on quality and user experience.
@@ -52,39 +50,40 @@ export const Hero = () => {
             </a>
 
           </div> */}
-<div className="hero-buttons">
+          <div className="hero-buttons">
 
-  <a
-    href="https://github.com/"
-    target="_blank"
-    className="hero-btn primary"
-  >
-    <FiGithub />
-  </a>
+            <a
+              href="https://github.com/"
+              target="_blank"
+              className="hero-btn primary"
+            >
+              <FaGithub />
+            </a>
 
-  <a
-    href="https://linkedin.com/"
-    target="_blank"
-    className="hero-btn secondary"
-  >
-    <FaLinkedin  />
-  </a>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              className="hero-btn secondary"
+            >
+              <FaLinkedin  />
+            </a>
 
-  <a
-    href="#"
-    className="hero-btn outline"
-  >
-    <FiDownload />
-    <span>CV</span>
-  </a>
-
-</div>
+          </div>
         </div>
 
         {/* RIGHT SIDE */}
 
         <div className="hero-right">
           <Terminal />
+      <div className="hero-image-wrapper">
+
+        <img
+          src="/hero-image.png"
+          alt="Eduardo"
+          className="hero-image"
+        />
+
+      </div>
         </div>
 
       </section>

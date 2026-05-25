@@ -18,7 +18,7 @@ const FULL_CODE_TOKENS: CodeToken[] = [
   { text: "'Eduardo Juárez',", type: 'string', line: 2 },
   
   { text: 'role: ', type: 'property', line: 3, indent: 'standard' },
-  { text: "'Frontend Developer & QA Engineer',", type: 'string', line: 3 },
+  { text: "'Frontend Developer & Roku Developer',", type: 'string', line: 3 },
   
   { text: 'skills: ', type: 'property', line: 4, indent: 'standard' },
   { text: "[", type: 'plain', line: 4 },

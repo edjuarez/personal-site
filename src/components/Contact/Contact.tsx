@@ -34,9 +34,11 @@ export const Contact = () => {
     {/* LEFT SIDE */}
 
     <div className="contact-info">
-      <h2 className="contact-title">
+      <h2 className="about-title">
         Let's Talk
       </h2>
+
+      <div className="about-divider" />
 
       <p className="contact-description">
         I'm always interested in new projects,
@@ -76,7 +78,7 @@ export const Contact = () => {
 
       </div>
 
-      <div className="contact-socials">
+      {/* <div className="contact-socials">
 
         <a
           href="https://github.com/"
@@ -92,7 +94,7 @@ export const Contact = () => {
           LinkedIn
         </a>
 
-      </div>
+      </div> */}
 
     </div>
 
@@ -143,7 +145,7 @@ export const Contact = () => {
 
         <button type="submit">
           <span>Send</span>
-          <FiSend />
+          {/* <FiSend /> */}
         </button>
 
       </form>

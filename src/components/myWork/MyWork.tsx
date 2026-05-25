@@ -1,43 +1,59 @@
 import "./MyWork.css";
 
+import { useState } from "react";
+
 import ProjectCard from "../ProjectCard/ProjectCard";
 
 import { projects } from "../../data/projects";
 
 export const MyWork = () => {
+
+  const [expandedId, setExpandedId] =
+    useState<number | null>(null);
+
   return (
-    <>
-      <section id="work" className="my-work">
 
-        <div className="my-work-header">
+    <section
+      id="work"
+      className="my-work"
+    >
 
-          <p className="section-label">
-            PORTFOLIO
-          </p>
+    <span className="about-label general-label">
+      Porfolio
+    </span>
 
-          <h2 className="my-work-title">
-            My <span style={{ color: "#ff5f56" }}>Work</span>
-          </h2>
+    <h2 className="about-title general-title">
+      Some projects I've worked on...
+    </h2>
 
-          <p className="my-work-description">
-            A collection of applications, games and
-            frontend experiences I've built and worked on.
-          </p>
+    <div className="about-divider" />
 
-        </div>
+      <div className="projects-grid">
 
-        <div className="projects-grid">
+        {projects.map((project) => (
 
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-            />
-          ))}
+          <ProjectCard
+            key={project.id}
 
-        </div>
+            project={project}
 
-      </section>
-    </>
+            expanded={
+              expandedId === project.id
+            }
+
+            onToggle={() =>
+              setExpandedId(
+                expandedId === project.id
+                  ? null
+                  : project.id
+              )
+            }
+          />
+
+        ))}
+
+      </div>
+
+    </section>
   );
 };

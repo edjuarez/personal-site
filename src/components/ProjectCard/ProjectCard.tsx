@@ -1,18 +1,123 @@
 import "./ProjectCard.css";
 
-// import type { Project } from "../../types/Project";
+import {
+  FiPlay,
+  FiGlobe,
+  FiCode,
+  FiMonitor,
+  FiLayers,
+  FiChevronDown,
+  FiGithub
+} from "react-icons/fi";
 
-// interface Props {
-//   project: Project;
-// }
+import {
+  useEffect,
+  useRef
+} from "react";
 
-export default function ProjectCard({
+const ProjectCard = ({
   project,
-}: Props) {
+  expanded,
+  onToggle
+}) => {
+
+  const cardRef = useRef(null);
+
+  /* ========================= */
+  /* AUTO SCROLL */
+  /* ========================= */
+
+  useEffect(() => {
+
+    if (
+      expanded &&
+      cardRef.current
+    ) {
+
+      setTimeout(() => {
+
+        cardRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      }, 120);
+
+    }
+
+  }, [expanded]);
+
+  /* ========================= */
+  /* CATEGORY ICON */
+  /* ========================= */
+
+  const renderCategoryIcon = () => {
+
+    switch (project.category) {
+
+      case "Game":
+        return <FiPlay />;
+
+      case "Web":
+        return <FiGlobe />;
+
+      default:
+        return <FiCode />;
+    }
+  };
+
+  /* ========================= */
+  /* TECH ICON */
+  /* ========================= */
+
+  const renderTechIcon = (tech) => {
+
+    switch (tech.toLowerCase()) {
+
+      case "react":
+        return <FiCode />;
+
+      case "vite":
+        return <FiMonitor />;
+
+      case "css":
+        return <FiLayers />;
+
+      default:
+        return <FiCode />;
+    }
+  };
+
   return (
-    <article className="project-card">
+
+    <div
+      ref={cardRef}
+      className={
+        expanded
+          ? "project-card expanded"
+          : "project-card"
+      }
+    >
+
+      {/* ========================= */}
+      {/* IMAGE */}
+      {/* ========================= */}
 
       <div className="project-image-wrapper">
+
+        {/* CATEGORY */}
+
+        {/* <div className="project-badge">
+
+          {renderCategoryIcon()}
+
+          <span>
+            {project.category}
+          </span>
+
+        </div> */}
+
+        {/* IMAGE */}
 
         <img
           src={project.image}
@@ -22,44 +127,159 @@ export default function ProjectCard({
 
       </div>
 
+      {/* ========================= */}
+      {/* CONTENT */}
+      {/* ========================= */}
+
       <div className="project-content">
 
-        <h3 className="project-title">
+        {/* TITLE */}
+
+        <h3>
           {project.title}
         </h3>
 
-        <p className="project-description">
+        {/* DESCRIPTION */}
+
+        <p>
           {project.description}
         </p>
 
-        {/* TAGS */}
+        {/* ========================= */}
+        {/* TECH */}
+        {/* ========================= */}
 
-        <div className="project-tags">
+        <div className="project-tech">
 
-          {/* {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="project-tag"
-            >
-              {tag}
-            </span>
-          ))} */}
+          {project.technologies.map(
+            (tech) => (
+
+              <span key={tech}>
+
+                {renderTechIcon(tech)}
+
+                {tech}
+
+              </span>
+
+            )
+          )}
 
         </div>
 
-        {/* BUTTON */}
+        {/* ========================= */}
+        {/* BUTTONS */}
+        {/* ========================= */}
 
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noreferrer"
-          className="project-button"
-        >
-          View Project
-        </a>
+        <div className="project-actions">
+
+          {/* PLAY / VISIT */}
+
+          {project.playable ? (
+
+            <a
+              href={project.gameUrl}
+              target="_blank"
+              className="project-btn primary"
+            >
+
+              <FiPlay />
+
+              Play
+
+            </a>
+
+          ) : (
+
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              className="project-btn primary"
+            >
+
+              <FiGlobe />
+
+              Visit
+
+            </a>
+
+          )}
+
+          {/* DETAILS */}
+
+          <button
+            className="project-btn secondary"
+            onClick={onToggle}
+          >
+
+            <FiChevronDown
+              className={
+                expanded
+                  ? "details-icon active"
+                  : "details-icon"
+              }
+            />
+
+            Details
+
+          </button>
+
+        </div>
+
+        {/* ========================= */}
+        {/* EXPANDED CONTENT */}
+        {/* ========================= */}
+
+        {expanded && (
+
+          <div className="expanded-content">
+
+            {/* LONG DESCRIPTION */}
+
+            <p className="expanded-description">
+
+              {project.longDescription}
+
+            </p>
+
+            {/* GAME */}
+
+            {project.playable && (
+
+              <iframe
+                src={project.gameUrl}
+                className="game-frame"
+                title={project.title}
+              />
+
+            )}
+
+            {/* GITHUB */}
+
+            {project.githubUrl && (
+
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                className="github-link"
+              >
+
+                <FiGithub />
+
+                GitHub Repository
+
+              </a>
+
+            )}
+
+          </div>
+
+        )}
 
       </div>
 
-    </article>
+    </div>
   );
-}
+};
+
+export default ProjectCard;
