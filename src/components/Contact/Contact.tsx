@@ -7,153 +7,180 @@ import {
   FiMessageSquare,
   FiSend,
 } from "react-icons/fi";
+import emailjs from "@emailjs/browser";
+import { IoSendSharp } from "react-icons/io5";
+import { useRef, useState } from "react";
 
 export const Contact = () => {
-  // const [form, setForm] = useState({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
+  const [cooldown, setCooldown] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const form = useRef();
+  const sendEmail = (e) => {
+    if (cooldown) {
 
-  // const handleChange = (e) => {
-  //   setForm({ ...form, [e.target.name]: e.target.value });
-  // };
+      alert("Please wait before sending another message.");
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   // Acá luego conectamos EmailJS, Resend o tu backend
-  //   console.log("Enviando...", form);
-  // };
+      return;
+    }
+    e.preventDefault();
+    if (isSending) return;
+    setIsSending(true);
+    emailjs.sendForm('service_fbw91qw', 'template_07ql51d', form.current, 'tQfp3s48hpQ_U_ad4')
+      .then((result) => {
+        console.log(result.text);
+        alert("Message sent successfully!");
+        setCooldown(true);
+        setTimeout(() => setCooldown(false), 30000); // 30 seconds cooldown
+        form.current.reset();
+        setIsSending(false);
+      }, (error) => {
+        console.log(error.text);
+        alert("An error occurred while sending the message. Please try again later.");
+        setIsSending(false);
+      });
+  };
 
   return (
-<section id="contact" className="contact-section">
+    <section id="contact" className="contact-section">
 
-  <div className="contact-container">
+      <div className="contact-container">
 
-    {/* LEFT SIDE */}
+        {/* LEFT SIDE */}
 
-    <div className="contact-info">
-      <h2 className="about-title">
-        Let's Talk
-      </h2>
+        <div className="contact-info">
+          <h2 className="about-title">
+            Let's Talk
+          </h2>
 
-      <div className="about-divider" />
+          <div className="about-divider" />
 
-      <p className="contact-description">
-        I'm always interested in new projects,
-        frontend opportunities and creative ideas.
-      </p>
+          <p className="contact-description">
+            I'm always interested in new projects,
+            frontend opportunities and creative ideas.
+          </p>
 
-      <div className="contact-details">
+          <div className="contact-details">
 
-        <div className="contact-item">
-          <div className="contact-icon">
-            <FiMail />
+            <div className="contact-item">
+              <div className="contact-icon">
+                <FiMail />
+              </div>
+              <div>
+                <p>edujuarezcba@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="contact-item">
+              <div className="contact-icon">
+                <FiPhone />
+              </div>
+
+              <div>
+                <p>+34 617913802</p>
+              </div>
+            </div>
+
+            <div className="contact-item">
+              <div className="contact-icon">
+                <FiMapPin />
+              </div>
+
+              <div>
+                <p>Barcelona, Spain</p>
+              </div>
+            </div>
+
           </div>
-          <div>
-            <p>edujuarezcba@gmail.com</p>
-          </div>
+
+          {/* <div className="contact-socials">
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+
+          </div> */}
+
         </div>
 
-        <div className="contact-item">
-          <div className="contact-icon">
-            <FiPhone />
-          </div>
+        {/* RIGHT SIDE */}
 
-          <div>
-            <p>+34 617913802</p>
-          </div>
-        </div>
+        <div className="contact-form-wrapper">
 
-        <div className="contact-item">
-          <div className="contact-icon">
-            <FiMapPin />
-          </div>
+          <form ref={form}
+            className="contact-form"
+            onSubmit={sendEmail}>
 
-          <div>
-            <p>Barcelona, Spain</p>
-          </div>
+            <div className="input-group">
+
+              <div className="input-icon">
+                <FiUser />
+              </div>
+
+              <input type="text" 
+                placeholder="Your Name"
+                  name="name"
+                  required
+               />
+
+            </div>
+
+            <div className="input-group">
+
+              <div className="input-icon">
+                <FiMail />
+              </div>
+
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                required
+              />
+
+            </div>
+
+            <div className="input-group textarea-group">
+
+              <div className="input-icon">
+                <FiMessageSquare />
+              </div>
+
+              <textarea
+                placeholder="Your Message"
+                rows={6}
+                name="message"
+                required
+                minLength={10}
+              />
+
+            </div>
+
+            <button type="submit" disabled={cooldown || isSending}>
+              <span>
+                {isSending
+                  ? "Sending..."
+                  : "Send Message"}
+              </span>
+              {/* <span>Send</span> */}
+              <IoSendSharp />
+            </button>
+
+          </form>
+
         </div>
 
       </div>
 
-      {/* <div className="contact-socials">
-
-        <a
-          href="https://github.com/"
-          target="_blank"
-        >
-          GitHub
-        </a>
-
-        <a
-          href="https://linkedin.com/"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
-
-      </div> */}
-
-    </div>
-
-    {/* RIGHT SIDE */}
-
-    <div className="contact-form-wrapper">
-
-      <form className="contact-form">
-
-        <div className="input-group">
-
-          <div className="input-icon">
-            <FiUser />
-          </div>
-
-          <input
-            type="text"
-            placeholder="Your Name"
-          />
-
-        </div>
-
-        <div className="input-group">
-
-          <div className="input-icon">
-            <FiMail />
-          </div>
-
-          <input
-            type="email"
-            placeholder="Your Email"
-          />
-
-        </div>
-
-        <div className="input-group textarea-group">
-
-          <div className="input-icon">
-            <FiMessageSquare />
-          </div>
-
-          <textarea
-            placeholder="Your Message"
-            rows={6}
-          />
-
-        </div>
-
-        <button type="submit">
-          <span>Send</span>
-          {/* <FiSend /> */}
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
   );
 }

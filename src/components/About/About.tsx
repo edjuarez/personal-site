@@ -25,20 +25,11 @@ export const About = () => {
 
   return (
 
-    <section
-      id="about"
-      className="about"
-    >
-
+    <section id="about" className="about">
       <div className="about-container">
 
         {/* LEFT SIDE */}
-
         <div className="about-left">
-
-          {/* <span className="about-label general-label">
-            ABOUT ME
-          </span> */}
 
           <h2 className="about-title general-title">
             About Myself
@@ -55,48 +46,11 @@ export const About = () => {
           <br />
           I work with modern frameworks such as React and Angular, and I actively use AI-powered tools like OpenAI ChatGPT and Anthropic Claude to improve development speed, software quality, and overall project efficiency.
           </p>
-          {/* STATS */}
-
-          {/* <div className="about-stats">
-
-            <div className="about-stat-card">
-
-              <FiCode />
-
-              <h3>10+</h3>
-
-              <p>Projects</p>
-
-            </div>
-
-            <div className="about-stat-card">
-
-              <FiLayers />
-
-              <h3>5+</h3>
-
-              <p>Years Experience</p>
-
-            </div>
-
-            <div className="about-stat-card">
-
-              <FiZap />
-
-              <h3>Always</h3>
-
-              <p>Learning</p>
-
-            </div>
-
-          </div> */}
-
         </div>
 
         {/* RIGHT SIDE */}
 
         <div className="about-right">
-
           <div className="about-image-card">
 
             <img
@@ -107,56 +61,22 @@ export const About = () => {
             <div className="about-glow" />
 
           </div>
-         <div className="about-skills">
-
+          <div className="about-skills">
             <p className="about-skills-title">
               PROFICIENT IN
             </p>
-
             <div className="about-skills-grid">
-
-              <span>
-                <FaJsSquare />
-                JavaScript
-              </span>
-
-              <span>
-                <SiTypescript />
-                TypeScript
-              </span>
-
-              <span>
-                <FaReact />
-                React
-              </span>
-
-              <span>
-                <FaAngular />
-                Angular
-              </span>
-
-              <span>
-                <FaHtml5 />
-                HTML
-              </span>
-
-              <span>
-                <FaCss3Alt />
-                CSS
-              </span>
-
-              <span>
-                <FaGitAlt />
-                Git
-              </span>
-
+              <span><FaJsSquare />JavaScript</span>
+              <span><SiTypescript />TypeScript</span>
+              <span><FaReact />React</span>
+              <span><FaAngular />Angular</span>
+              <span><FaHtml5 />HTML5</span>
+              <span><FaCss3Alt />CSS3</span>
+              <span><FaGitAlt />Git</span>
             </div>
-
           </div>
         </div>
-
       </div>
-
     </section>
   );
 };
