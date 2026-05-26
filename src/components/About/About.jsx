@@ -48,7 +48,7 @@ export const About = () => {
           <div className="about-image-card">
 
             <img
-              src="/profile.png"
+              src="./profile.png"
               alt="Eduardo"
             />
 

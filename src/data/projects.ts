@@ -6,7 +6,7 @@ export const projects = [
                   "Multi-platform video game developed in ActionScript for web and mobile. The project aims to raise environmental awareness through fast-paced gameplay, where players must prevent the fish from being overwhelmed by toxic waste.",
                 longDescription:
                   "Multi-platform video game developed in ActionScript for web and mobile. The project aims to raise environmental awareness through fast-paced gameplay, where players must prevent the fish from being overwhelmed by toxic waste.",
-                image: "/projects/rupert.png",
+                image: "./projects/rupert.png",
                 technologies: [
                   "Adobe ActionScript",
                   "Flash",
@@ -27,7 +27,7 @@ export const projects = [
                   "Video game developed in Construct for academic purposes. The project implements arcade-style mechanics focused on survival and high-score accumulation. Controls feature mouse-based navigation for movement and click-to-shoot mechanics, requiring precise dodging of enemy attacks.",
                 longDescription:
                   "Videogame made in construct for web browsers.",
-                image: "/projects/masterelba.png",
+                image: "./projects/masterelba.png",
                 technologies: [
                   "Construct",
                   "HTML5",
@@ -56,7 +56,7 @@ export const projects = [
                 longDescription:
                   "2d videogame for web browsers.",
 
-                image: "/projects/penality1.png",
+                image: "./projects/penality1.png",
 
                 technologies: [
                   "Construct",
@@ -83,7 +83,7 @@ export const projects = [
                 longDescription:
                   "2d videogame for web browsers.",
 
-                image: "/projects/tank.png",
+                image: "./projects/tank.png",
 
                 technologies: [
                   "Construct",
@@ -110,7 +110,7 @@ export const projects = [
                 longDescription:
                   "2d videogame for web browsers.",
 
-                image: "/projects/delivery.png",
+                image: "./projects/delivery.png",
 
                 technologies: [
                   "Adobe ActionScript",
@@ -136,7 +136,7 @@ export const projects = [
                 longDescription:
                   "2d videogame for web browsers.",
 
-                image: "/projects/synesthesia.png",
+                image: "./projects/synesthesia.png",
 
                 technologies: [
                   "Construct",

@@ -365,3 +365,205 @@ padding: calc(var(--stroke-width) / 2);
 
   z-index: -1;
 }
+
+/* ========================= */
+/* MOBILE HERO */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+      7rem 7% 4rem;
+
+    gap: 2rem;
+    padding-bottom: 0;
+  }
+
+  /* ========================= */
+  /* LEFT CONTENT */
+  /* ========================= */
+
+  .hero-left {
+    order: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size:
+      clamp(3rem, 12vw, 4.5rem);
+
+    line-height: 0.95;
+
+    margin-bottom: 1rem;
+  }
+
+  .hero-role {
+    font-size: 1rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+
+    line-height: 1.7;
+
+    max-width: 100%;
+
+    margin-bottom: 0;
+  }
+
+  .hero-divider {
+    margin:
+      1.5rem auto;
+  }
+
+  /* ========================= */
+  /* BUTTONS */
+  /* ========================= */
+
+  .hero-buttons {
+    justify-content: center;
+
+    margin-top: 2rem;
+  }
+
+  .hero-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .hero-btn svg {
+    font-size: 1.3rem;
+  }
+
+  /* ========================= */
+  /* RIGHT */
+  /* ========================= */
+
+/* HERO RIGHT */
+
+.hero-right {
+  order: 2;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   min-height: auto;
+}
+
+/* IMAGE */
+
+.hero-image-wrapper {
+  position: absolute;
+
+  left: -262px;
+  bottom: -40px;
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+.hero-image {
+  width: 200px;
+
+  object-fit: contain;
+}
+
+  .hero-image-wrapper::before {
+    width: 220px;
+    height: 220px;
+
+    filter: blur(60px);
+  }
+
+  /* ========================= */
+  /* TERMINAL */
+  /* ========================= */
+
+  .vscode-typed-profile {
+    width: 100%;
+
+    max-width: 100%;
+
+    overflow-x: auto;
+
+    transform: scale(0.92);
+
+    transform-origin: top center;
+  }
+
+  /* ========================= */
+  /* BG EFFECTS */
+  /* ========================= */
+
+  .hero::before {
+    width: 400px;
+    height: 400px;
+
+    top: -180px;
+    right: -200px;
+
+    filter: blur(100px);
+  }
+
+  .hero::after {
+    width: 300px;
+    height: 300px;
+
+    bottom: -120px;
+    left: -120px;
+
+    filter: blur(80px);
+  }
+
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 520px) {
+
+  .hero {
+    padding:
+      6.5rem 6% 3rem;
+      padding-bottom: 0;
+  }
+
+  .hero-title {
+    font-size:
+      clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .hero-description {
+    font-size: 0.92rem;
+  }
+
+  .hero-role {
+    font-size: 0.95rem;
+  }
+
+  .vscode-typed-profile {
+    transform: scale(0.82);
+  }
+
+}

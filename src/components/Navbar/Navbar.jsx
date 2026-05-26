@@ -1,38 +1,64 @@
 import "./Navbar.css";
 import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+
 export const Navbar = () => {
 
-    const [value, setValue] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    function count() {
-        setValue((prevValue) => prevValue + 1)
-    }
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
-    return(
+  return (
 
- <header className="navbar">
+    <header className="navbar">
 
-      <nav className="navbar-links">
+      {/* <div className="navbar-logo">
+        EJ
+      </div> */}
 
-        <a href="#home">
+      {/* MOBILE BUTTON */}
+
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {
+          menuOpen
+            ? <FiX />
+            : <FiMenu />
+        }
+      </button>
+
+      {/* LINKS */}
+
+      <nav
+        className={
+          menuOpen
+            ? "navbar-links active"
+            : "navbar-links"
+        }
+      >
+
+        <a href="#home" onClick={closeMenu}>
           Home
         </a>
 
-        <a href="#about">
+        <a href="#about" onClick={closeMenu}>
           About Me
         </a>
 
-        <a href="#work">
+        <a href="#work" onClick={closeMenu}>
           My Work
         </a>
 
-        <a href="#contact">
+        <a href="#contact" onClick={closeMenu}>
           Contact
         </a>
 
       </nav>
 
     </header>
-
-    )
-}
+  );
+};
