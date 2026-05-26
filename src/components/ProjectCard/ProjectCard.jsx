@@ -6,7 +6,6 @@ import {
   FiCode,
   FiMonitor,
   FiLayers,
-  FiChevronDown,
   FiGithub
 } from "react-icons/fi";
 
@@ -36,7 +35,7 @@ const ProjectCard = ({
 
       setTimeout(() => {
 
-        cardRef.current.scrollIntoView({
+        cardRef.current?.scrollIntoView({
           behavior: "smooth",
           block: "center"
         });
@@ -46,25 +45,6 @@ const ProjectCard = ({
     }
 
   }, [expanded]);
-
-  /* ========================= */
-  /* CATEGORY ICON */
-  /* ========================= */
-
-  const renderCategoryIcon = () => {
-
-    switch (project.category) {
-
-      case "Game":
-        return <FiPlay />;
-
-      case "Web":
-        return <FiGlobe />;
-
-      default:
-        return <FiCode />;
-    }
-  };
 
   /* ========================= */
   /* TECH ICON */
@@ -86,6 +66,7 @@ const ProjectCard = ({
       default:
         return <FiCode />;
     }
+
   };
 
   return (
@@ -104,20 +85,6 @@ const ProjectCard = ({
       {/* ========================= */}
 
       <div className="project-image-wrapper">
-
-        {/* CATEGORY */}
-
-        {/* <div className="project-badge">
-
-          {renderCategoryIcon()}
-
-          <span>
-            {project.category}
-          </span>
-
-        </div> */}
-
-        {/* IMAGE */}
 
         <img
           src={project.image}
@@ -173,13 +140,14 @@ const ProjectCard = ({
 
         <div className="project-actions">
 
-          {/* PLAY / VISIT */}
+          {/* PLAY */}
 
           {project.playable && (
 
             <a
               href={project.gameUrl}
               target="_blank"
+              rel="noreferrer"
               className="project-btn primary"
             >
 
@@ -190,25 +158,6 @@ const ProjectCard = ({
             </a>
 
           )}
-
-          {/* DETAILS */}
-
-          {/* <button
-            className="project-btn secondary"
-            onClick={onToggle}
-          >
-
-            <FiChevronDown
-              className={
-                expanded
-                  ? "details-icon active"
-                  : "details-icon"
-              }
-            />
-
-            Details
-
-          </button> */}
 
         </div>
 
@@ -247,6 +196,7 @@ const ProjectCard = ({
               <a
                 href={project.githubUrl}
                 target="_blank"
+                rel="noreferrer"
                 className="github-link"
               >
 
@@ -265,7 +215,9 @@ const ProjectCard = ({
       </div>
 
     </div>
+
   );
+
 };
 
 export default ProjectCard;

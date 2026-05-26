@@ -2,14 +2,14 @@ import "./MyWork.css";
 
 import { useState } from "react";
 
-import ProjectCard from "../ProjectCard/ProjectCard";
+import ProjectCard from "../ProjectCard/ProjectCard.jsx";
 
 import { projects } from "../../data/projects";
 
 export const MyWork = () => {
 
   const [expandedId, setExpandedId] =
-    useState<number | null>(null);
+    useState(null);
 
   return (
 
@@ -18,15 +18,15 @@ export const MyWork = () => {
       className="my-work"
     >
 
-    <span className="about-label general-label">
-      Porfolio
-    </span>
+      <span className="about-label general-label">
+        Portfolio
+      </span>
 
-    <h2 className="about-title general-title">
-      Some projects I've worked on...
-    </h2>
+      <h2 className="about-title general-title">
+        Some projects I've worked on...
+      </h2>
 
-    <div className="about-divider" />
+      <div className="about-divider" />
 
       <div className="projects-grid">
 
@@ -42,11 +42,15 @@ export const MyWork = () => {
             }
 
             onToggle={() =>
+
               setExpandedId(
+
                 expandedId === project.id
                   ? null
                   : project.id
+
               )
+
             }
           />
 
@@ -55,5 +59,7 @@ export const MyWork = () => {
       </div>
 
     </section>
+
   );
+
 };

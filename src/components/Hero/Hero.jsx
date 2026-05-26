@@ -1,5 +1,5 @@
 import "./Hero.css";
-import { Terminal } from "../Terminal/Terminal";
+import { Terminal } from "../Terminal/Terminal.jsx";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 
 export const Hero = () => {
