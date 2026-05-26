@@ -13,7 +13,7 @@ export const projects = [
                   "Pixel Art"
                 ],
                 category: "Game",
-                playable: true,
+                playable: false,
                 gameUrl:
                   "/games/rupert/index.html",
 
@@ -51,7 +51,7 @@ export const projects = [
                 title: "Penality",
 
                 description:
-                  "2d videogame for web browsers.",
+                  "2D game project centered on control fluidity and enemy attack pattern design. It combines responsive shooting mechanics with reactive evasion, challenging the player to overcome incrementally difficult obstacles to achieve the highest possible score.",
 
                 longDescription:
                   "2d videogame for web browsers.",
@@ -78,7 +78,7 @@ export const projects = [
                 title: "Tank",
 
                 description:
-                  "2d videogame for web browsers.",
+                  "2D project implementing a keyboard-driven control system for tank movement and collision detection for combat. The game integrates an incremental scoring system, designed to provide an intuitive and competitive gameplay experience.",
 
                 longDescription:
                   "2d videogame for web browsers.",
@@ -98,5 +98,58 @@ export const projects = [
                   "https://client-site.com",
 
                 githubUrl: ""
-              }
+              },
+              {
+                id: 5,
+
+                title: "Delivery Guy",
+
+                description:
+                  "",
+
+                longDescription:
+                  "2d videogame for web browsers.",
+
+                image: "/projects/delivery.png",
+
+                technologies: [
+                  "Adobe ActionScript",
+                  "Flash",
+                  "Pixel Art"
+                ],
+                category: "Web",
+                playable: false,
+                gameUrl: "",
+                liveUrl:
+                  "https://client-site.com",
+
+                githubUrl: ""
+              },
+              {
+                id: 6,
+
+                title: "Synesthesia The Game",
+
+                description:
+                  "",
+
+                longDescription:
+                  "2d videogame for web browsers.",
+
+                image: "/projects/synesthesia.png",
+
+                technologies: [
+                  "Construct",
+                  "HTML5",
+                  "Pixel Art",
+                  "webpack"
+                ],
+                category: "Web",
+                playable: false,
+                gameUrl: "",
+                liveUrl:
+                  "https://client-site.com",
+
+                githubUrl: ""
+              },
 ];

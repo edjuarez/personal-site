@@ -53,7 +53,7 @@ export const Hero = () => {
           <div className="hero-buttons">
 
             <a
-              href="https://github.com/"
+              href="https://github.com/edjuarez"
               target="_blank"
               className="hero-btn primary"
             >
@@ -61,7 +61,7 @@ export const Hero = () => {
             </a>
 
             <a
-              href="https://linkedin.com/"
+              href="https://linkedin.com/in/eduardo-juarez-dev"
               target="_blank"
               className="hero-btn secondary"
             >

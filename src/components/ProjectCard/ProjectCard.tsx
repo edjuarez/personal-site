@@ -175,7 +175,7 @@ const ProjectCard = ({
 
           {/* PLAY / VISIT */}
 
-          {project.playable ? (
+          {project.playable && (
 
             <a
               href={project.gameUrl}
@@ -189,25 +189,11 @@ const ProjectCard = ({
 
             </a>
 
-          ) : (
-
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              className="project-btn primary"
-            >
-
-              <FiGlobe />
-
-              Visit
-
-            </a>
-
           )}
 
           {/* DETAILS */}
 
-          <button
+          {/* <button
             className="project-btn secondary"
             onClick={onToggle}
           >
@@ -222,7 +208,7 @@ const ProjectCard = ({
 
             Details
 
-          </button>
+          </button> */}
 
         </div>
 
