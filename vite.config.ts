@@ -10,7 +10,7 @@ import babel from "@rolldown/plugin-babel";
 
 export default defineConfig({
 
-  base: "/portfolio/",
+  base: "/",
 
   plugins: [
 
