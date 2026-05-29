@@ -16,9 +16,10 @@ export const Hero = () => {
           </h2>
 
           <p className="hero-role">
-            Frontend & Game Developer
+            Front End & Game Developer
           </p>
-
+// agrega un header
+    
           <div className="about-divider" />
 
           <p className="hero-description">

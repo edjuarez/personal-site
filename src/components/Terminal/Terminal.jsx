@@ -24,7 +24,7 @@ const FULL_CODE_TOKENS = [
   { text: "'Angular', ", type: 'string', line: 8, indent: 'extra' },
   { text: "'HTML', ", type: 'string', line: 9, indent: 'extra' },
   { text: "'CSS', ", type: 'string', line: 10, indent: 'extra' },
-  { text: "'SASS' ", type: 'string', line: 11, indent: 'extra' },
+  { text: "'Node.js' ", type: 'string', line: 11, indent: 'extra' },
 
   { text: '],', type: 'plain', line: 11, indent: 'extra' }
 ];
