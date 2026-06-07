@@ -6,7 +6,7 @@ export const projects = [
                   "Multi-platform video game developed in ActionScript for web and mobile. The project aims to raise environmental awareness through fast-paced gameplay, where players must prevent the fish from being overwhelmed by toxic waste.",
                 longDescription:
                   "Multi-platform video game developed in ActionScript for web and mobile. The project aims to raise environmental awareness through fast-paced gameplay, where players must prevent the fish from being overwhelmed by toxic waste.",
-                image: "./projects/rupert.png",
+                image: "./projects/rupert.webp",
                 technologies: [
                   "Adobe ActionScript",
                   "Flash",
@@ -27,7 +27,7 @@ export const projects = [
                   "Video game developed in Construct for academic purposes. The project implements arcade-style mechanics focused on survival and high-score accumulation. Controls feature mouse-based navigation for movement and click-to-shoot mechanics, requiring precise dodging of enemy attacks.",
                 longDescription:
                   "Videogame made in construct for web browsers.",
-                image: "./projects/masterelba.png",
+                image: "./projects/masterelba.webp",
                 technologies: [
                   "Construct",
                   "HTML5",
@@ -56,7 +56,7 @@ export const projects = [
                 longDescription:
                   "2d videogame for web browsers.",
 
-                image: "./projects/penality1.png",
+                image: "./projects/penality1.webp",
 
                 technologies: [
                   "Construct",
@@ -83,7 +83,7 @@ export const projects = [
                 longDescription:
                   "2d videogame for web browsers.",
 
-                image: "./projects/tank.png",
+                image: "./projects/tank.webp",
 
                 technologies: [
                   "Construct",
@@ -105,12 +105,12 @@ export const projects = [
                 title: "Delivery Guy",
 
                 description:
-                  "",
+                  "A simple arcade-style delivery game where players use arrow keys to move and spacebar to deliver packages while avoiding traffic. Focuses on timing, reflexes, and route planning as difficulty increases with faster and denser car patterns.",
 
                 longDescription:
                   "2d videogame for web browsers.",
 
-                image: "./projects/delivery.png",
+                image: "./projects/delivery.webp",
 
                 technologies: [
                   "Adobe ActionScript",
@@ -131,12 +131,12 @@ export const projects = [
                 title: "Synesthesia The Game",
 
                 description:
-                  "",
+                  "A 2D action-platformer inspired by classic run-and-gun games like Metal Slug. Players navigate multiple levels using arrow keys, battle waves of zombies, collect weapons, and earn points through a progressive scoring system with increasing difficulty.",
 
                 longDescription:
                   "2d videogame for web browsers.",
 
-                image: "./projects/synesthesia.png",
+                image: "./projects/synesthesia.webp",
 
                 technologies: [
                   "Construct",

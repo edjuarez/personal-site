@@ -78,7 +78,7 @@ export const Hero = () => {
       <div className="hero-image-wrapper">
 
         <img
-          src="./hero-image.png"
+          src="./hero-image.webp"
           alt="Eduardo"
           className="hero-image"
         />
