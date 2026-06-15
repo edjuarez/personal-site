@@ -123,7 +123,7 @@ export const Contact = () => {
             <div className="input-group">
 
               <div className="input-icon">
-                <FiUser />
+                <FiUser style={{ color: '#d946ef' }} />
               </div>
 
               <input type="text" 
@@ -137,7 +137,7 @@ export const Contact = () => {
             <div className="input-group">
 
               <div className="input-icon">
-                <FiMail />
+                <FiMail style={{ color: '#3b82f6' }} />
               </div>
 
               <input
@@ -152,7 +152,7 @@ export const Contact = () => {
             <div className="input-group textarea-group">
 
               <div className="input-icon">
-                <FiMessageSquare />
+                <FiMessageSquare style={{ color: '#6366f1' }} />
               </div>
 
               <textarea

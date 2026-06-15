@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import ProjectCard from "../ProjectCard/ProjectCard.jsx";
 
-import { projects } from "../../data/projects";
+import { projects } from "../../data/projects.js";
 
 export const MyWork = () => {
 
@@ -23,8 +23,12 @@ export const MyWork = () => {
       </span>
 
       <h2 className="about-title general-title">
-        Some projects I've worked on...
+        Selected Projects
       </h2>
+
+      <p className="about-description general-description">
+        This section is currently a work in progress. At the moment it only includes academic game development projects from my university studies.
+      </p>
 
       <div className="about-divider" />
 

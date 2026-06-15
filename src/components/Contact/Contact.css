@@ -170,22 +170,20 @@
 
   border-radius: 28px;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgb(30 55 111 / 90%),
-      rgb(57 95 172 / 72%)
-    );
-
-  border:
-    1px solid rgba(255,255,255,0.05);
+  background:linear-gradient(145deg, #405a9659, #15254645);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(11, 8, 19, 0.5);
 
   backdrop-filter: blur(14px);
 
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.28);
-
   overflow: hidden;
+
+  max-width: 100%;
+
+  padding: 1.8rem;
+
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(150, 95, 248, 0.1);
 }
 
 /* ========================= */
@@ -449,16 +447,6 @@
 
   /* FORM */
 
-  .contact-form-wrapper {
-
-    width: 100%;
-
-    max-width: 100%;
-
-    padding: 1.8rem;
-
-    border-radius: 24px;
-  }
 
   .contact-form {
     gap: 1rem;
