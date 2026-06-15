@@ -1,6 +1,7 @@
 import "./Hero.css";
 import { Terminal } from "../Terminal/Terminal.jsx";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
+import { TbFileCvFilled  } from "react-icons/tb";
 
 export const Hero = () => {
   return (
@@ -68,6 +69,13 @@ export const Hero = () => {
               <FaLinkedin  />
             </a>
 
+            <a
+              href="./EduardoJuarez_SoftwareEngineer.pdf"
+              target="_blank"
+              className="hero-btn secondary"
+            >
+              <TbFileCvFilled  />
+            </a>
           </div>
         </div>
 
