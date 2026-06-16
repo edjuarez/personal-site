@@ -10,6 +10,7 @@ import {
   FaRobot,
   FaNodeJs
 } from "react-icons/fa";
+import { SiRoku } from "react-icons/si";
 
 import {
   SiTypescript
@@ -69,6 +70,7 @@ export const About = () => {
               <span><FaGitAlt />Git</span>
               <span><FaRobot />AI</span>
               <span><FaNodeJs />Node.js</span>
+              <span><SiRoku style={{ fontSize: "2rem" }} />Brightscript</span>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const FULL_CODE_TOKENS = [
   { text: "'Eduardo Juárez',", type: 'string', line: 2 },
 
   { text: 'role: ', type: 'property', line: 3, indent: 'standard' },
-  { text: "'Frontend Developer & Roku Developer',", type: 'string', line: 3 },
+  { text: "'Frontend, Roku & Game Developer',", type: 'string', line: 3 },
 
   { text: 'skills: ', type: 'property', line: 4, indent: 'standard' },
   { text: '[', type: 'plain', line: 4 },
@@ -26,7 +26,7 @@ const FULL_CODE_TOKENS = [
   { text: "'CSS', ", type: 'string', line: 10, indent: 'extra' },
   { text: "'Node.js' ", type: 'string', line: 11, indent: 'extra' },
 
-  { text: '],', type: 'plain', line: 11, indent: 'extra' }
+  { text: ']}', type: 'plain', line: 11, indent: 'extra' }
 ];
 
 // TOTAL CHARS

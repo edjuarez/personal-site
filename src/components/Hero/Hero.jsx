@@ -17,7 +17,7 @@ export const Hero = () => {
           </h2>
 
           <p className="hero-role">
-            Front End & Game Developer
+            Frontend Engineer | Roku & Game Developer
           </p>
     
           <div className="about-divider" />
@@ -74,7 +74,7 @@ export const Hero = () => {
               target="_blank"
               className="hero-btn secondary"
             >
-              <TbFileCvFilled  />
+              <TbFileCvFilled  style={{fontSize: '1.7rem'}} />
             </a>
           </div>
         </div>
@@ -83,7 +83,7 @@ export const Hero = () => {
 
         <div className="hero-right">
           <Terminal />
-      <div className="hero-image-wrapper">
+        <div className="hero-image-wrapper">
 
         <img
           src="./hero-image.webp"
