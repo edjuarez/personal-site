@@ -12,12 +12,16 @@ export const Hero = () => {
 
         <div className="hero-left">
 
-          <h2 className="hero-title">
+          {/* <h2 className="hero-title">
             <span>Eduardo</span> Juárez
-          </h2>
+          </h2> */}
+
+		<span class="glitchdist-text" data-text="Eduardo Juárez">
+			<span>Eduardo Juárez</span>
+		</span>
 
           <p className="hero-role">
-            Frontend Engineer | Roku & Game Developer
+            Frontend Engineer | Software Developer
           </p>
     
           <div className="about-divider" />

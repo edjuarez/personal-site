@@ -31,10 +31,38 @@ export const MyWork = () => {
       </p>
 
       <div className="about-divider" />
+      {/* <div className="projects-grid-web">
 
+        {projects.WEB.map((project) => (
+
+          <ProjectCard
+            key={project.id}
+
+            project={project}
+
+            expanded={
+              expandedId === project.id
+            }
+
+            onToggle={() =>
+
+              setExpandedId(
+
+                expandedId === project.id
+                  ? null
+                  : project.id
+
+              )
+
+            }
+          />
+
+        ))}
+
+      </div> */}
       <div className="projects-grid">
 
-        {projects.map((project) => (
+        {projects.GAME.map((project) => (
 
           <ProjectCard
             key={project.id}

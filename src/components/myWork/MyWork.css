@@ -62,6 +62,15 @@
 
   align-items: start;
 }
+.projects-grid-web {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    align-items: start;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+}
 
 /* ========================= */
 /* RESPONSIVE */
