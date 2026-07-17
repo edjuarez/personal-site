@@ -33,7 +33,7 @@
   margin-bottom: 1rem;
 }
 
-.my-work h2 {
+.about-title {
   font-size: 2rem;
 }
 
@@ -46,6 +46,11 @@
   line-height: 1.8;
 
   max-width: 620px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin: 30px 0;
 }
 
 /* ========================= */
@@ -61,6 +66,7 @@
   gap: 1.8rem;
 
   align-items: start;
+  margin-bottom: 40px;
 }
 .projects-grid-web {
     display: grid;

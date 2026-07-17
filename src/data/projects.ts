@@ -11,7 +11,7 @@ export const projects = {
       longDescription:
         "Designed and developed a modern, responsive e-commerce website for a handmade brand specializing in personalized products. Built with React, TypeScript, and Tailwind CSS",
 
-      image: "./projects/synesthesia.webp",
+      image: "./projects/noventitre.webp",
 
       technologies: [
         "React",
@@ -23,9 +23,9 @@ export const projects = {
       playable: false,
       gameUrl: "",
       liveUrl:
-        "https://client-site.com",
+        "https://noventitre.vercel.app/",
 
-      githubUrl: ""
+      githubUrl: "https://github.com/edjuarez/noventitre"
     },
       {
       id: 1,
@@ -38,7 +38,7 @@ export const projects = {
       longDescription:
         "Developed a responsive corporate website for a creative advertising agency using React, TypeScript, and CSS. Implemented reusable components, modern layouts, and smooth navigation to showcase the agency's services, portfolio, and brand identity.",
 
-      image: "./projects/synesthesia.webp",
+      image: "./projects/miro.webp",
 
       technologies: [
         "React",
@@ -50,9 +50,35 @@ export const projects = {
       playable: false,
       gameUrl: "",
       liveUrl:
-        "https://client-site.com",
+        "",
 
-      githubUrl: ""
+      githubUrl: "https://github.com/edjuarez/miro-agencia"
+    },{
+      id: 3,
+
+      title: "Gifs Searcher App",
+
+      description:
+        "A modern React application that lets users search for animated GIFs instantly. It features real-time search, responsive design, API integration, and a component-based architecture focused on performance and user experience.",
+
+      longDescription:
+        "",
+
+      image: "./projects/gifs-searcher.webp",
+
+      technologies: [
+        "React",
+        "javascript",
+        "CSS",
+        "Vite"
+      ],
+      category: "Web",
+      playable: false,
+      gameUrl: "",
+      liveUrl:
+        "",
+
+      githubUrl: "https://github.com/edjuarez/gifs-search-app"
     },
   ],
   "GAME": [

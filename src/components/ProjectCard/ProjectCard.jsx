@@ -138,8 +138,25 @@ const ProjectCard = ({
         {/* BUTTONS */}
         {/* ========================= */}
 
-        <div className="project-actions">
 
+
+
+        <div className="project-actions">
+        {/* GITHUB */}
+
+        {project.githubUrl && (
+
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="project-card-button github-link"
+          >
+            <FiGithub />
+            GitHub
+          </a>
+
+        )}
           {/* PLAY */}
 
           {project.playable && (
