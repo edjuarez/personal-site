@@ -124,9 +124,9 @@ export const projects = {
       gameUrl: "",
 
       liveUrl:
-        "https://client-site.com",
+        "",
 
-      githubUrl: ""
+      githubUrl: "https://github.com/edjuarez/master-elba-videogame"
     },
     {
       id: 3,

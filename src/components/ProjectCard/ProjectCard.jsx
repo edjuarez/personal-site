@@ -153,7 +153,7 @@ const ProjectCard = ({
             className="project-card-button github-link"
           >
             <FiGithub />
-            GitHub
+            <p>GitHub</p>
           </a>
 
         )}
