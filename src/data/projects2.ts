@@ -131,6 +131,86 @@ export const projects = {
     {
       id: 3,
 
+      title: "Penality",
+
+      description:
+        "2D game project centered on control fluidity and enemy attack pattern design. It combines responsive shooting mechanics with reactive evasion, challenging the player to overcome incrementally difficult obstacles to achieve the highest possible score.",
+
+      longDescription:
+        "2d videogame for web browsers.",
+
+      image: "./projects/penality1.webp",
+
+      technologies: [
+        "Construct",
+        "HTML5",
+        "Pixel Art",
+        "webpack"
+      ],
+      category: "Web",
+      playable: false,
+      gameUrl: "",
+      liveUrl:
+        "https://client-site.com",
+
+      githubUrl: ""
+    },
+    {
+      id: 4,
+
+      title: "Tank",
+
+      description:
+        "2D project implementing a keyboard-driven control system for tank movement and collision detection for combat. The game integrates an incremental scoring system, designed to provide an intuitive and competitive gameplay experience.",
+
+      longDescription:
+        "2d videogame for web browsers.",
+
+      image: "./projects/tank.webp",
+
+      technologies: [
+        "Construct",
+        "HTML5",
+        "Pixel Art",
+        "webpack"
+      ],
+      category: "Web",
+      playable: false,
+      gameUrl: "",
+      liveUrl:
+        "https://client-site.com",
+
+      githubUrl: ""
+    },
+    {
+      id: 5,
+
+      title: "Delivery Guy",
+
+      description:
+        "A simple arcade-style delivery game where players use arrow keys to move and spacebar to deliver packages while avoiding traffic. Focuses on timing, reflexes, and route planning as difficulty increases with faster and denser car patterns.",
+
+      longDescription:
+        "2d videogame for web browsers.",
+
+      image: "./projects/delivery.webp",
+
+      technologies: [
+        "Adobe ActionScript",
+        "Flash",
+        "Pixel Art"
+      ],
+      category: "Web",
+      playable: false,
+      gameUrl: "",
+      liveUrl:
+        "https://client-site.com",
+
+      githubUrl: ""
+    },
+    {
+      id: 6,
+
       title: "Synesthesia The Game",
 
       description:
