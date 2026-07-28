@@ -21,7 +21,7 @@ export const Hero = () => {
 		</span>
 
           <p className="hero-role">
-            Frontend Engineer | Software Developer
+            Software Engineer
           </p>
     
           <div className="about-divider" />
