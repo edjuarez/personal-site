@@ -28,7 +28,7 @@ export const projects = {
       githubUrl: "https://github.com/edjuarez/noventitre"
     },
       {
-      id: 1,
+      id: 2,
 
       title: "Miro - Advertising Agency Website",
 
@@ -50,7 +50,7 @@ export const projects = {
       playable: false,
       gameUrl: "",
       liveUrl:
-        "",
+        "https://github.com/edjuarez/miro-agencia",
 
       githubUrl: "https://github.com/edjuarez/miro-agencia"
     },{
@@ -76,7 +76,7 @@ export const projects = {
       playable: false,
       gameUrl: "",
       liveUrl:
-        "",
+        "https://github.com/edjuarez/gifs-search-app",
 
       githubUrl: "https://github.com/edjuarez/gifs-search-app"
     },

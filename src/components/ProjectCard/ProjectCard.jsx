@@ -101,10 +101,17 @@ const ProjectCard = ({
       <div className="project-content">
 
         {/* TITLE */}
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="project-title"
+          >
+          <h3>
+            {project.title}
+          </h3>
+          </a>
 
-        <h3>
-          {project.title}
-        </h3>
 
         {/* DESCRIPTION */}
 

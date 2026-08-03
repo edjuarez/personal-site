@@ -3,8 +3,6 @@
 
   overflow: hidden;
 
-  border-radius: 20px;
-
   background:
     rgba(255,255,255,0.03);
 
@@ -148,14 +146,19 @@
 /* TITLE */
 /* ========================= */
 
-.project-content h3 {
+.project-content .project-title {
   color: white;
 
-  font-size: 0.98rem;
+  font-size: 0.78rem;
 
   font-weight: 600;
 
   margin: 0;
+  text-decoration: none;
+  :hover{
+    color: #ff9c6b;
+    text-decoration: underline;
+  }
 }
 
 /* ========================= */
