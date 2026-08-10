@@ -28,7 +28,7 @@ export const projects = {
       githubUrl: "https://github.com/edjuarez/noventitre"
     },
       {
-      id: 1,
+      id: 2,
 
       title: "Miro - Advertising Agency Website",
 
